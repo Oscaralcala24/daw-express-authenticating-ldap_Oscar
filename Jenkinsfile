@@ -24,9 +24,9 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh './scripts/deliver.sh'
+        sh 'npm start'
         input 'Finished using the web site? (Select "Proceed" to continue)'
-        sh './scripts/kill.sh'
+        sh 'npm start'
       }
     }
 
