@@ -24,7 +24,8 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh 'npm start'
+        sh 'npm run build'
+        sh 'npm start & sleep 1'
         input 'Finished using the web site? (Select "Proceed" to continue)'
         sh 'npm start'
       }
