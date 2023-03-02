@@ -24,9 +24,9 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh './jenkins/scripts/deliver.sh'
-        input 'Finished using the web site? (Select "Proceed" to continue)'
         sh 'npm deliver'
+        input 'Finished using the web site? (Select "Proceed" to continue)'
+        sh 'npm kill'
       }
     }
 
