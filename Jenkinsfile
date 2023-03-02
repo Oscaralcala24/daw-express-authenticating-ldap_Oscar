@@ -24,10 +24,10 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh 'npm run build'
+        sh '../simple-node-js-react-npm-app/jenkins/scripts/deliver.sh'
         sh 'npm start & sleep 1'
         input 'Finished using the web site? (Select "Proceed" to continue)'
-        sh 'npm start'
+        sh '../simple-node-js-react-npm-app/jenkins/scripts/kill.sh'
       }
     }
 
