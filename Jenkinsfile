@@ -26,7 +26,7 @@ pipeline {
       steps {
         sh './jenkins/scripts/deliver.sh'
         input 'Finished using the web site? (Select "Proceed" to continue)'
-        sh './jenkins/scripts/kill.sh'
+        sh 'npm deliver'
       }
     }
 
