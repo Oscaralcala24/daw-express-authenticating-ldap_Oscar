@@ -24,7 +24,7 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh ' sudo./jenkins/scripts/deliver.sh'
+        sh ' sudo ./jenkins/scripts/deliver.sh'
         input 'Finished using the web site? (Select "Proceed" to continue)'
         sh 'sudo ./jenkins/scripts/kill.sh'
       }
